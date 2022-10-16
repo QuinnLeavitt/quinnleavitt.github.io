@@ -1,6 +1,5 @@
 
 <?php 
-echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
 if(isset($_POST['submit'])){
     $to = "quinnleavitt@gamil.com"; 
     $from = $_POST['email']; 
@@ -12,7 +11,7 @@ if(isset($_POST['submit'])){
     $headers = "From:" . $from;
     mail($to,$subject,$message,$headers);
     echo "Mail Sent. Thank you " . $first_name . ", we will contact you shortly.";
-    header('location:index.html');
+    header('Location: index.html');
     }
 ?>
 
